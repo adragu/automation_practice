@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="31.064">
+    <testcase classname="Home Page Search Tests" name="User can do a search from the home page" time="27.273">
+        <system-out><![CDATA[Given I search "Selenium" in the search input of the home page..............passed
+When I press the search button in the home page.............................passed
+Then the links are displayed on the results page............................passed
+]]></system-out>
+    </testcase>
+</testsuite>

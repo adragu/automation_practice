@@ -1,0 +1,38 @@
+pipeline {
+    parameters {
+        string(name: 'BROWSER', defaultValue: 'chrome', description: 'Browser of choice')
+        string(name: 'GRID', defaultValue: 'normal', description: 'Option for running on grid or not, can take values as `normal` or `remote`')
+     }
+
+    agent any
+
+    stages {
+
+        stage('Run tests') {
+            steps {
+               script {
+                sh "mvn clean install -Dselenium.browser.param=${params.BROWSER} -Dselenium.grid.param=${params.GRID}"
+               }
+            }
+        }
+    }
+    post {
+        always {
+            // publish html
+            archiveCucumberReports();
+            deleteDir();
+        }
+    }
+}
+
+def archiveCucumberReports(){
+    publishHTML target: [
+            allowMissing         : false,
+            alwaysLinkToLastBuild: false,
+            keepAll              : true,
+            reportDir            : 'results',
+            reportFiles          : 'cucumber-reports.html',
+            reportName           : 'Selenium spring boot training Report'
+    ]
+
+}

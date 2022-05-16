@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %date{"HH:mm:ss,SSS"} %-5level [%c:%line] %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${user.home}/selenium.log</file>
+        <append>false</append>
+        <encoder>
+            <Pattern>
+                %date{"HH:mm:ss,SSS"} %-5level [%c:%line] %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+    <root level="warn">
+        <appender-ref ref="console" />
+        <appender-ref ref="FILE" />
+    </root>
+    <logger name="com.endava.selenium" level="debug" />
+    <logger name="com.endava.selenium" level="info" />
+</configuration>

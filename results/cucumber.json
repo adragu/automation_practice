@@ -1,0 +1,115 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-16T07:00:48.767Z",
+        "before": [
+          {
+            "result": {
+              "duration": 28003300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.endava.selenium.steps.BaseSteps.logBeforeScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 25079947400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.endava.selenium.steps.BaseSteps.initializeDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 4189400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.endava.selenium.runners.SpringBootRunner.setupCucumberSpringContext()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "User can do a search from the home page",
+        "description": "",
+        "id": "home-page-search-tests;user-can-do-a-search-from-the-home-page",
+        "after": [
+          {
+            "result": {
+              "duration": 7995300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.endava.selenium.steps.BaseSteps.logAfterScenario(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 243756300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.endava.selenium.steps.BaseSteps.closeDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 130789500,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I search \"Selenium\" in the search input of the home page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Selenium",
+                  "offset": 10
+                }
+              ],
+              "location": "com.endava.selenium.steps.HomeSteps.iSearchInTheSearchInputOfTheHomePage(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1556138300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I press the search button in the home page",
+            "match": {
+              "location": "com.endava.selenium.steps.HomeSteps.iPressTheSearchButtonInTheHomePage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 147079700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the links are displayed on the results page",
+            "match": {
+              "location": "com.endava.selenium.steps.ResultsSteps.theLinksAreDisplayedOnTheResultsPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Home Page Search Tests",
+    "description": "",
+    "id": "home-page-search-tests",
+    "keyword": "Feature",
+    "uri": "classpath:features/HomeSearch.feature",
+    "tags": []
+  }
+]
